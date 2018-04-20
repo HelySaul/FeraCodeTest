@@ -1,7 +1,8 @@
 <div mat-dialog-content>
   <mat-toolbar><span>Login</span></mat-toolbar><br>
   <mat-form-field>
-    <input matInput placeholder="Email" [(ngModel)]="email">
+    <input matInput placeholder="Email" [formControl]="email">
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="Password" type="password" [(ngModel)]="password">

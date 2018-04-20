@@ -1,6 +1,6 @@
 footer {
   /* just for demo */
-  background-color: #636363;
+  background-color: #b803ff;
   border-top: 1px solid #E7E7E7;
   text-align: center;
   /* just for demo */
@@ -11,6 +11,11 @@ footer {
   height: 60px;
   width: 100%;
   padding: 15px 0;
+
+  a {
+    color: inherit;
+    target-new:tab
+  }
 
   .part {
     width: 19%;
@@ -27,6 +32,7 @@ footer {
       font-size: 25px;
       margin-bottom: 10px;
     }
+
     .desc {
       text-align: center;
       font-size: 15px;

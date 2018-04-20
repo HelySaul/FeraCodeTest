@@ -24,7 +24,6 @@ export class LandingpageComponent {
       width: '250px',
     });
   }
-
 }
 
 @NgModule({

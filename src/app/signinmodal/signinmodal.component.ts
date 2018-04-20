@@ -1,6 +1,7 @@
 import {Component, NgModule} from '@angular/core';
 import {MatDialogRef} from "@angular/material";
 import {Router} from "@angular/router";
+import {FormControl, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-signinmodal',
@@ -9,8 +10,8 @@ import {Router} from "@angular/router";
 })
 export class SigninmodalComponent {
 
-  email: string;
   password: string;
+  email = new FormControl('', [Validators.required, Validators.email]);
 
   constructor(public dialogRef: MatDialogRef<SigninmodalComponent>,public router: Router) {
   }
@@ -22,6 +23,12 @@ export class SigninmodalComponent {
   login() {
     this.dialogRef.close();
     this.router.navigateByUrl("/user");
+  }
+
+  getErrorMessage() {
+    return this.email.hasError('required') ? 'You must enter a value' :
+      this.email.hasError('email') ? 'Not a valid email' :
+        '';
   }
 }
 
