@@ -1,5 +1,12 @@
 <mat-sidenav-container>
-<mat-toolbar><span>Hola</span></mat-toolbar>
-<app-landingpage></app-landingpage>
+  <mat-toolbar>
+    <img src="/assets/img/logo.png" width="4%" height="60%">
+    <span class="fill-remaining-space"></span>
+    <ol>
+      <button mat-raised-button (click)="openSignInModal()">SignIn</button>
+      <button mat-raised-button (click)="openSignUpModal()">SignUp</button>
+    </ol>
+  </mat-toolbar>
+  <app-landingpage></app-landingpage>
   <router-outlet></router-outlet>
 </mat-sidenav-container>

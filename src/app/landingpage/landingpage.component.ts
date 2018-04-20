@@ -15,7 +15,7 @@ export class LandingpageComponent {
 
   openSignInModal(): void {
     let dialogRef = this.dialog.open(SigninmodalComponent, {
-      width: '250px',
+      width: '270px',
     });
   }
 

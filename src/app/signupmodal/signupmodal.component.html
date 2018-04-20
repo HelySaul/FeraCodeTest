@@ -1,17 +1,19 @@
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
 <div mat-dialog-content>
-  <p>Sign Up</p>
+  <mat-toolbar><span>Sign Up</span></mat-toolbar><br>
   <mat-form-field>
-    <input matInput [(ngModel)]="data.animal" [formControl]="emailFormControl">
-    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-      Please enter a valid email address
-    </mat-error>
-    <mat-error *ngIf="emailFormControl.hasError('required')">
-      Email is <strong>required</strong>
-    </mat-error>
+    <input matInput placeholder="Full name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Email">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Phone">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Password" type="password">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="login()">Start!</button>
 </div>

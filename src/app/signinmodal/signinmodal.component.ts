@@ -8,18 +8,17 @@ import {MatDialogRef} from "@angular/material";
 })
 export class SigninmodalComponent {
 
-  private user: string;
-  private email: string;
-  private phone: string;
-  private password: string;
+  email: string;
+  password: string;
 
   constructor(public dialogRef: MatDialogRef<SigninmodalComponent>) {
   }
 
-  onNoClick(): void {
+  onCancel(): void {
     this.dialogRef.close();
   }
 
+  login() {}
 }
 
 @NgModule({

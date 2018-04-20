@@ -1,11 +1,13 @@
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
 <div mat-dialog-content>
-  <p>Login</p>
+  <mat-toolbar><span>Login</span></mat-toolbar><br>
   <mat-form-field>
-    <input matInput [(ngModel)]="data.animal">
+    <input matInput placeholder="Email" [(ngModel)]="email">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Password" type="password" [(ngModel)]="password">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Lets Shop!</button>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button>Lets Continue!</button>
 </div>

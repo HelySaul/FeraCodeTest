@@ -1,6 +1,6 @@
 import {Component, NgModule} from '@angular/core';
 import {MatDialogRef} from "@angular/material";
-import {FormControl, FormsModule, Validators} from "@angular/forms";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-signinmodal',
@@ -9,17 +9,17 @@ import {FormControl, FormsModule, Validators} from "@angular/forms";
 })
 export class SignupmodalComponent {
 
+  private email: string;
+  private password: string;
+
   constructor(public dialogRef: MatDialogRef<SignupmodalComponent>) {
   }
 
-  onNoClick(): void {
+  onCancel(): void {
     this.dialogRef.close();
   }
 
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  login() {}
 
 }
 
