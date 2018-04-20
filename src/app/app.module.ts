@@ -11,6 +11,7 @@ import {SigninmodalComponent} from './signinmodal/signinmodal.component';
 import {CarouselComponent} from './carousel/carousel.component';
 import {UserloggedComponent} from './userlogged/userlogged.component';
 import {LandingpageComponent} from './landingpage/landingpage.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import {LandingpageComponent} from './landingpage/landingpage.component';
     SigninmodalComponent,
     CarouselComponent,
     UserloggedComponent,
-    LandingpageComponent
+    LandingpageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

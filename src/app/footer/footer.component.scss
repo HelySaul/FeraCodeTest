@@ -1,0 +1,37 @@
+footer {
+  /* just for demo */
+  background-color: #636363;
+  border-top: 1px solid #E7E7E7;
+  text-align: center;
+  /* just for demo */
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  padding: 15px 0;
+
+  .part {
+    width: 19%;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    transition: transform 1.5s;
+
+    :hover {
+      transform: scale(1.1);
+    }
+
+    i {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    .desc {
+      text-align: center;
+      font-size: 15px;
+    }
+
+  }
+
+}

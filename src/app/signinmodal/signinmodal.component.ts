@@ -1,5 +1,6 @@
 import {Component, NgModule} from '@angular/core';
 import {MatDialogRef} from "@angular/material";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-signinmodal',
@@ -11,14 +12,17 @@ export class SigninmodalComponent {
   email: string;
   password: string;
 
-  constructor(public dialogRef: MatDialogRef<SigninmodalComponent>) {
+  constructor(public dialogRef: MatDialogRef<SigninmodalComponent>,public router: Router) {
   }
 
   onCancel(): void {
     this.dialogRef.close();
   }
 
-  login() {}
+  login() {
+    this.dialogRef.close();
+    this.router.navigateByUrl("/user");
+  }
 }
 
 @NgModule({
