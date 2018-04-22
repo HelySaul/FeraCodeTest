@@ -2,6 +2,10 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+
 import {AppComponent} from './app.component';
 import {CoreModule} from "./core/core.module";
 import {SharedModule} from "./shared/shared.module";
@@ -20,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     CarouselComponent,
     UserloggedComponent,
     LandingpageComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,9 @@ import { FooterComponent } from './footer/footer.component';
     CoreModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent],
