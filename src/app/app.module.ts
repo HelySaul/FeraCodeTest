@@ -2,6 +2,10 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import {environment} from '../environments/environment';
+
 import {AppComponent} from './app.component';
 import {CoreModule} from "./core/core.module";
 import {SharedModule} from "./shared/shared.module";
@@ -11,7 +15,10 @@ import {SigninmodalComponent} from './signinmodal/signinmodal.component';
 import {CarouselComponent} from './carousel/carousel.component';
 import {UserloggedComponent} from './userlogged/userlogged.component';
 import {LandingpageComponent} from './landingpage/landingpage.component';
-import { FooterComponent } from './footer/footer.component';
+import {FooterComponent} from './footer/footer.component';
+import {AppService} from "./services/app.service";
+import {HttpModule} from "@angular/http";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +35,12 @@ import { FooterComponent } from './footer/footer.component';
     CoreModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent],
   entryComponents: []
 })

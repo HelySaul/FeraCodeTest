@@ -1,0 +1,56 @@
+{
+  "list": "Summer Diapers",
+  "releaseDate": "2018-06-06T00:00:00.000Z",
+  "products": {
+    "diapers": [
+      {
+        "name": "ConfortMaxx",
+        "id": "1",
+        "size": "m",
+        "path": "/assets/img/diapers/1.png"
+      },
+      {
+        "name": "Day Laster",
+        "id": "2",
+        "size": "s",
+        "path": "/assets/img/diapers/2.png"
+      },
+      {
+        "name": "Dryexx",
+        "id": "3",
+        "size": "l",
+        "path": "/assets/img/diapers/3.png"
+      },
+      {
+        "name": "Keep clean",
+        "id": "4",
+        "size": "l",
+        "path": "/assets/img/diapers/4.png"
+      },
+      {
+        "name": "Stealth",
+        "id": "5",
+        "size": "xxl",
+        "path": "/assets/img/diapers/5.png"
+      },
+      {
+        "name": "Whooops",
+        "id": "6",
+        "size": "m",
+        "path": "/assets/img/diapers/6.png"
+      },
+      {
+        "name": "Swimmer",
+        "id": "7",
+        "size": "s",
+        "path": "/assets/img/diapers/7.png"
+      },
+      {
+        "name": "Runner",
+        "id": "8",
+        "size": "xl",
+        "path": "/assets/img/diapers/8.png"
+      }
+    ]
+  }
+}

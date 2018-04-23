@@ -1,3 +1,10 @@
-<p>
-  carousel works!
-</p>
+<div class="main-class">
+  <div class="header">Project Slider</div>
+  <div class="slider">
+    <ul [@slide]="{value: slider, params:{left: pxValue}}" >
+      <li *ngFor="let diaper of diapersJson">
+        <img [src]="diaper.path">
+      </li>
+    </ul>
+  </div>
+</div>

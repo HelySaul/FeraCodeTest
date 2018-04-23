@@ -1,0 +1,33 @@
+
+.main-class {
+  width: 800px;
+  margin: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+
+  .header {
+    padding: 15px;
+    font-size: 110%;
+    background-color: #47AD54;
+    color: #fff;
+  }
+
+  .slider {
+    width: 800px;
+    overflow: hidden;
+
+    ul {
+      list-style: none;
+      width: 2400px;
+      position: relative;
+      left:0;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      float: left;
+    }
+  }
+}

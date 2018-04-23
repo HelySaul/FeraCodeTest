@@ -1,4 +1,4 @@
-import {Component, NgModule, OnInit} from '@angular/core';
+import {Component, NgModule} from '@angular/core';
 import {MatDialog, MatSnackBar} from "@angular/material";
 import {SigninmodalComponent} from "../signinmodal/signinmodal.component";
 import {SignupmodalComponent} from "../signupmodal/signupmodal.component";
