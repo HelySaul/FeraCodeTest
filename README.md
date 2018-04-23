@@ -1,27 +1,20 @@
-# FrontEndApp
+-This project was made for the FeraMade FrontEnd test.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+-The project is made using Angular 5, and Saas
 
-## Development server
+-The project uses the Front End Library of Material Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+-For starting the project, is needed to make an "npm install" on the terminal, and then a "ng-serve".
 
-## Code scaffolding
+-The login and the create user are fully functionals using the NOSql from firebase, in this way the validations of the
+created user and the login are real.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-The information of the landing page are fetched from a Json file, so it was needed to create a Service to get the information
 
-## Build
+-The carousel-like slider was made all by myself and is functional with the information of the Json
+(it's good to mention that the slider is not generic and in order for it to be generic, some adaptations are needed to calculate
+all the posible use cases, but in this example is made to work with the provided Json structure)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+-All the requirements of the test are being treated in this test system
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Created By: Hely Saul Oberto.
