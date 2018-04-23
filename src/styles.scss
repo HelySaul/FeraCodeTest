@@ -1,11 +1,14 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber';
 
-body {
+html, body {
   margin: 0;
   box-sizing: border-box;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
   url(/assets/img/background.jpg) no-repeat 0px -90px;
   background-size: cover;
+  position: relative;
+  padding: 0;
+  overflow: auto;
 }
 

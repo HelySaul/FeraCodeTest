@@ -33,7 +33,8 @@ export class SignupmodalComponent {
   users: Observable<any[]>;
 
   constructor(public dialogRef: MatDialogRef<SignupmodalComponent>, public db: AngularFireDatabase, public snackBar: MatSnackBar,
-              private router: Router){}
+              private router: Router) {
+  }
 
   makeid(): string {
     let text = "";
@@ -71,11 +72,8 @@ export class SignupmodalComponent {
   }
 
   getDate(): string {
-    const date: Date = new Date();
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const day = date.getDay();
-    return day + "/" + month + "/" + year;
+    const todayDate = new Date();
+    return (todayDate.getFullYear() + '/' + ((todayDate.getMonth() + 1)) + '/' + todayDate.getDate() + ' ' + todayDate.getHours() + ':' + todayDate.getMinutes() + ':' + todayDate.getSeconds());
   }
 
   onRegister(): void {

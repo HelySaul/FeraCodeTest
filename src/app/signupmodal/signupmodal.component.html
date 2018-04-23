@@ -1,5 +1,5 @@
 <div mat-dialog-content>
-  <mat-toolbar><span>Sign Up</span></mat-toolbar><br>
+  <mat-toolbar><span>Create User</span></mat-toolbar><br>
   <mat-form-field>
     <input matInput placeholder="Full name" [formControl]="fullnameControl" [(ngModel)]="user.fullname">
     <mat-error *ngIf="fullnameControl.invalid">{{getFullnameErrorMessage()}}</mat-error>

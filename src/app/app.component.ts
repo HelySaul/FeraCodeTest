@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.activatedRoute.queryParams.subscribe(params => {
       if (params['id']) {
         this.showLogout = true;

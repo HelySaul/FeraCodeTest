@@ -17,11 +17,11 @@ export class Diaper {
     trigger('slide', [
       state('move1', style({
         left: '{{left}}'
-      }),{params: {left: '0'}}),
+      }),{params: {left: '0px'}}),
       state('move2',   style({
         left: '{{left}}'
-      }),{params: {left: '0'}} ),
-      transition('inactive <=> active', animate('100ms ease-in'))
+      }),{params: {left: '0px'}} ),
+      transition('* => *', animate(700))
     ])
   ]
 })
@@ -29,9 +29,10 @@ export class CarouselComponent implements OnInit {
 
   currentPage = 1;
   pages = 2;
-  slider = 'move1'
+  slider = 'move1';
   diapersJson: Diaper[];
-  pxValue = 0;
+  pxValue = "";
+  interval : any;
   @ViewChild('ul') ul: ElementRef;
 
   constructor(private appService: AppService) {
@@ -40,23 +41,40 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
     this.appService.getJSON().subscribe(data => {
       this.diapersJson = data.products.diapers;
-
-      setInterval(()=> {
-
-        if(this.currentPage = this.pages){
-          this.currentPage = 1;
-          console.log(this.ul);
-          this.ul.nativeElement.style.left=0;
-        }else {
-          this.currentPage++;
-          this.pxValue = -(this.currentPage -1) * 800;
+      this.diapersJson.forEach((el, index) => {
+        if(index<4){
+         this.diapersJson.push(this.diapersJson[index]);
         }
-
-        console.log(this.slider);
-      }, 2000);
+      })
+      this.transition();
 
     }, error => console.log(error));
+  }
 
+  transition() {
+    this.interval = setInterval(()=> {
+
+      this.currentPage++;
+      if(this.currentPage === this.pages + 1){
+        this.pxValue = -(this.currentPage -1) * 800 + "px";
+        this.slide();
+        this.currentPage = 1;
+        setTimeout(() => {
+          this.pxValue = "0px";
+        }, 700);
+      }else {
+        this.pxValue = -(this.currentPage -1) * 800 + "px";
+        this.slide();
+      }
+    }, 2000);
+  }
+
+  onHover() {
+    clearInterval(this.interval);
+  }
+
+  onHoverOut() {
+    this.transition();
   }
 
   slide(){

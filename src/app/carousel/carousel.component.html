@@ -1,9 +1,10 @@
 <div class="main-class">
-  <div class="header">Project Slider</div>
+  <div class="header">Our Products</div>
   <div class="slider">
-    <ul [@slide]="{value: slider, params:{left: pxValue}}" >
+    <ul [@slide]="{value: slider, params:{left: pxValue}}" #ul (mouseenter)="onHover()" (mouseleave)="onHoverOut()">
       <li *ngFor="let diaper of diapersJson">
         <img [src]="diaper.path">
+        <p>{{diaper.name}} ({{diaper.size}})</p>
       </li>
     </ul>
   </div>

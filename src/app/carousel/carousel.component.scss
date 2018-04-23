@@ -7,9 +7,9 @@
   padding: 10px;
 
   .header {
-    padding: 15px;
+    padding: 7px;
     font-size: 110%;
-    background-color: #47AD54;
+    background-color: #bd02ff;
     color: #fff;
   }
 
@@ -21,13 +21,18 @@
       list-style: none;
       width: 2400px;
       position: relative;
-      left:0;
+      left: 0;
       padding: 0;
       margin: 0;
-    }
+      text-align: center;
 
-    li {
-      float: left;
+      li {
+        float: left;
+      }
+
+      p {
+        margin: 0;
+      }
     }
   }
 }
